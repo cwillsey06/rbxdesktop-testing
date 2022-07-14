@@ -1,0 +1,25 @@
+{
+  "name": "rbxdesktop-testing",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "common": {
+        "$path": "src/common",
+        "$ignoreUnknownInstances": true,
+
+        "Packages": {
+          "$path": "Packages"
+        }
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "client": {
+          "$path": "src/client"
+        }
+      }
+    }
+  }
+}
