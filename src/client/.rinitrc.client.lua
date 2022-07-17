@@ -2,6 +2,9 @@
 -- Coltrane Willsey
 -- 2022-07-13 [23:03]
 
+local Components = script.Parent.Components
+local it = require(Components.it)
+
 local common = game:GetService("ReplicatedStorage"):WaitForChild("common")
 local Packages = common:WaitForChild("Packages")
 local Knit = require(Packages:WaitForChild("knit"))
@@ -33,6 +36,11 @@ function main()
     })
     -- Deps.Rorg.RandR(Display, true)
     Rorg.RandR(Display, true)
+
+    -- Set wallpaper
+    local itWin = Rorg.CreateWindow("it")
+    local itComp = it:FromInstance(itWin.Window)
+    itComp:makeBg("rbxassetid://5649083940")
 
     -- Bind debug keys
     bind({ Enum.KeyCode.N }, function()

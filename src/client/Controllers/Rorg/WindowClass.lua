@@ -37,7 +37,7 @@ function WindowClass:RemoveContent()
     self._contentCT:Destroy()
 end
 
-function WindowClass:_createWindow(mount: Instance?, content: GuiObject?, properties: WindowProperties?)
+function WindowClass:_createWindow(mount: Instance?, content: (GuiObject | string)?, properties: WindowProperties?)
     assert(not self.Window, "_createWindow has already been called")
 
     local WindowCanvas = new("CanvasGroup", mount, {
